@@ -74,17 +74,7 @@ def check_col(boxes,box_num,col,ele):
         return
     return True
 
-def find_zeros(boxes):
-    for i in range(len(boxes)):
-        for j in range(3):
-            for k in range(3):
-                if boxes[i].box[j][k] == 0:
-                    return(i+1,j+1,k+1)
-    return None
 
-def is_safe(boxes,box_num,row,col,ele):
-    return boxes[box_num-1].is_safe(ele) and check_row(boxes,box_num,row,ele) and check_col(boxes,box_num,col,ele)
-        
 def solve(boxes):
     zero_pos = find_zeros(boxes)
     if zero_pos == None:
