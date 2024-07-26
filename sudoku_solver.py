@@ -103,3 +103,21 @@ def print_soln(boxes):
     for box in boxes:
         print(box.box)
 
+box1 = Box([[0,7,0],[0,5,9],[3,4,0]],1)
+box2 = Box([[5,8,3],[2,0,0],[0,0,6]],2)
+box3 = Box([[0,2,0],[3,0,0],[5,0,7]],3)
+box4 = Box([[7,9,5],[0,0,3],[6,8,0]],4)
+box5 = Box([[0,0,0],[6,9,7],[0,0,2]],5)
+box6 = Box([[6,3,2],[1,0,0],[7,0,0]],6)
+box7 = Box([[9,1,4],[0,3,0],[5,6,7]],7)
+box8 = Box([[8,3,5],[7,0,1],[4,2,9]],8)
+box9 = Box([[0,7,6],[4,9,5],[0,1,3]],9)
+
+boxes = [box1,box2,box3,box4,box5,box6,box7,box8,box9]
+
+# print(box1.is_safe(1))
+# print(check_row(boxes,2,2,2))
+# print(check_col(boxes,2,2,3))
+# print(box1.empty)
+if solve(boxes):
+    print_soln(boxes)
